@@ -2,8 +2,6 @@ package Quiz02;
 
 import java.util.*;
 import java.text.*;
-
-
 class TimerQuiz{
 	private Date date;
 	private SimpleDateFormat simpl;
@@ -24,10 +22,10 @@ class TimerQuiz{
 	}
 }
 
-class Win7Quiz extends TimerQuiz{
+class Win7Quiz02 extends TimerQuiz{
 	private String[] name;
 	private String[] info;
-	public Win7Quiz(String c,String m, String cPath,String mPath){
+	public Win7Quiz02(String c,String m, String cPath,String mPath){
 		name = new String[2];
 		name[0]=c;name[1]=m;
 		info = new String[2];
@@ -73,9 +71,9 @@ class Win7Quiz extends TimerQuiz{
 		}
 	}
 }
-class login extends Win7Quiz{
+class Login02 extends Win7Quiz02{
     private String userId=null,userPw=null;//User
-    public login(String c,String m,String cPath,String mPath){
+    public Login02(String c,String m,String cPath,String mPath){
     	super(c,m,cPath,mPath);
     }
     public int compare(String id,String pw){
@@ -95,7 +93,7 @@ public class Quiz02 {
 public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     int num=0,result=0; String inputId=null,inputPw=null;
-    login lo = new login("계산기","메모장","calc.exe","notepad.exe"); boolean flag=true;
+    Login02 lo = new Login02("계산기","메모장","calc.exe","notepad.exe"); boolean flag=true;
     lo.time();
     while(flag){
         System.out.print("1.로그인  2.가 입  3.로그아웃 \n>>>"); num = input.nextInt();
